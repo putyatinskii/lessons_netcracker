@@ -7,10 +7,10 @@ import java.util.Base64;
 
 public class Solution_Decoding {
     public static void run(String[] args) {
-        try(FileInputStream fin = new FileInputStream("C://Users//Asus//Desktop//1.txt")) {
+        try(FileInputStream fin = new FileInputStream("1.txt")) {
             byte[] buffer = new byte[fin.available()-2];
             fin.read(buffer, 0, fin.available()-2);
-            try (FileOutputStream imageOutFile = new FileOutputStream("C://Users//Asus//Desktop//image.png")) {
+            try (FileOutputStream imageOutFile = new FileOutputStream("image.png")) {
                 byte[] imageByteArray = Base64.getDecoder().decode(buffer);
                 imageOutFile.write(imageByteArray);
             }
