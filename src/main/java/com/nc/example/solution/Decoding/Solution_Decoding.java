@@ -1,12 +1,15 @@
 package com.nc.example.solution.Decoding;
 
+import com.nc.example.LessonAPI;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Base64;
 
-public class Solution_Decoding {
-    public static void run(String[] args) {
+public class Solution_Decoding implements LessonAPI {
+    @Override
+    public void executeSolution(String[] args) {
         try(FileInputStream fin = new FileInputStream("1.txt")) {
             byte[] buffer = new byte[fin.available()-2];
             fin.read(buffer, 0, fin.available()-2);
