@@ -34,6 +34,7 @@ public class Solution_lesson6 implements LessonAPI {
         System.out.println(urlHolder);
 
         System.out.println("=====================\n");
+
         String url1 = "https://example.com:8000/path/to/page" +
                 "?name=ferret" +
                 "&color=purple";
