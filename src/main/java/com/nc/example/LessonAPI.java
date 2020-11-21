@@ -3,5 +3,5 @@ package com.nc.example;
 import java.net.MalformedURLException;
 
 public interface LessonAPI {
-    void executeSolution(String[] args) throws MalformedURLException;
+    void executeSolution(String[] args);
 }

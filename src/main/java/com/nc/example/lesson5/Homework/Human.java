@@ -7,9 +7,9 @@ public class Human {
         this.caloriesCnt = 0;
     }
 
-    public void eat(Fruit fruit) {
-        this.caloriesCnt += fruit.getCalories();
-        fruit.output();
+    public void eat(IEatable food) {
+        this.caloriesCnt += food.getCaloriesInfo();
+        food.output();
     }
 
     public void infoCaloriesCnt() {

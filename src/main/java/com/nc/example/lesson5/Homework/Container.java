@@ -1,14 +1,14 @@
 package com.nc.example.lesson5.Homework;
 
-public class Container {
-    private int cnt;
-    private double weight;
-    private Fruit[] fruits;
+public abstract class Container {
+    protected int cnt;
+    protected double weight;
+    protected Fruit[] fruits;
 
-    public Container() {
+    public Container(int n) {
         cnt = 0;
         weight = 0;
-        fruits = new Fruit[5];
+        fruits = new Fruit[n];
     }
 
     public int getCnt() {
@@ -21,11 +21,11 @@ public class Container {
         return fruits[cnt];
     }
 
-    public void setFruits(Fruit fruit) throws Exception {
-        if (cnt < 5 && weight < 1) {
-            fruits[cnt] = fruit.clone();
-            ++cnt;
-            weight += fruit.getWeight();
-        } else throw new Exception("Контейнер заполнен! В него больше ничего нельзя положить");
+    public abstract void trySetFruits(Fruit fruit) throws Exception;
+
+    protected void setFruits(Fruit fruit) throws Exception {
+        fruits[cnt] = fruit.clone();
+        ++cnt;
+        weight += fruit.getWeight();
     }
 }

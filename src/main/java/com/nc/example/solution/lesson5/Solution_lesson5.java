@@ -1,16 +1,13 @@
 package com.nc.example.solution.lesson5;
 import com.nc.example.LessonAPI;
 
-import com.nc.example.lesson5.Classwork.*;
 import com.nc.example.lesson5.Homework.*;
-
-import java.util.Base64;
 
 public class Solution_lesson5 implements LessonAPI {
     @Override
     public void executeSolution(String[] args) {
-        Basket basket = new Basket();
-        Container container = new Container();
+        Container basket = new Basket();
+        Container container = new Plastic_Container();
 
         Fruit banana = new Banana(0.3, 267);
         Fruit banana1 = new Banana(0.2, 178);
@@ -20,13 +17,13 @@ public class Solution_lesson5 implements LessonAPI {
         Fruit orange1 = new Orange(0.4, 190);
 
         try {
-            container.setFruits(banana);
-            container.setFruits(banana1);
-            container.setFruits(orange);
+            container.trySetFruits(banana);
+            container.trySetFruits(banana1);
+            container.trySetFruits(orange);
 
-            basket.setFruits(orange1);
-            basket.setFruits(apple);
-            basket.setFruits(apple1);
+            basket.trySetFruits(orange1);
+            basket.trySetFruits(apple);
+            basket.trySetFruits(apple1);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -41,7 +38,7 @@ public class Solution_lesson5 implements LessonAPI {
         human.infoCaloriesCnt();
 
         try {
-            basket.setFruits(new Apple(0.3, 140));
+            basket.trySetFruits(new Apple(0.3, 140));
             human.eat(basket.getFruit());
             human.infoCaloriesCnt();
         } catch (Exception e) {

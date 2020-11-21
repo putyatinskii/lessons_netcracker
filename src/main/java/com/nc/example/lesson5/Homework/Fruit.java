@@ -1,12 +1,17 @@
 package com.nc.example.lesson5.Homework;
 
-public abstract class Fruit implements Cloneable {
+public abstract class Fruit implements Cloneable, IEatable {
     protected double weight;
     protected int calories;
 
     public Fruit(double weight, int calories) {
         this.weight = weight;
         this.calories = calories;
+    }
+
+    @Override
+    public int getCaloriesInfo() {
+        return calories;
     }
 
     public double getWeight() {
@@ -33,6 +38,4 @@ public abstract class Fruit implements Cloneable {
             throw new InternalError();
         }
     }
-
-    public abstract void output();
 }
