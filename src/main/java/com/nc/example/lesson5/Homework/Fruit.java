@@ -38,4 +38,6 @@ public abstract class Fruit implements Cloneable, IEatable {
             throw new InternalError();
         }
     }
+
+
 }
