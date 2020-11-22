@@ -20,6 +20,7 @@ public class RandomProvider implements AutoCloseable {
 
     @Override
     public void close() throws Exception {
-        System.out.println("Класс закрыт");
+        array = null;
+        System.out.println("Массив очищен");
     }
 }
