@@ -1,4 +1,4 @@
-package com.nc.example.lesson6;
+package com.nc.example.solution.lesson6;
 
 import com.nc.example.LessonAPI;
 import com.plugin.api.Plugin;
