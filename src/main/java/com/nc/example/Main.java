@@ -1,7 +1,8 @@
 package com.nc.example;
 
-import com.nc.example.solution.lesson9.*;
 
+import com.nc.example.solution.lesson11.Classwork.Solution_lesson11_Classwork;
+import com.nc.example.solution.lesson11.Homework.Solution_lesson11;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,7 +13,9 @@ public class Main {
         //new Solution_lesson6().executeSolution(args);
         //new DynamicClassLoaderExample().executeSolution(args);
         //new Solution_lesson8().executeSolution(args);
-        new Solution_lesson9().executeSolution(args);
+        //new Solution_lesson9().executeSolution(args);
+        //new Solution_lesson11_Classwork().executeSolution(args);
+        new Solution_lesson11().executeSolution(args);
         //new Solution_lesson15().executeSolution(args);
 
 
