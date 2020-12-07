@@ -3,6 +3,9 @@ import com.nc.example.LessonAPI;
 
 import com.nc.example.lesson5.Homework.*;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Solution_lesson5 implements LessonAPI {
     @Override
     public void executeSolution(String[] args) {

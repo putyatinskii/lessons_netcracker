@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <bean class = "com.nc.example.solution.lesson22.Radio" id = "first" init-method="playMusic">
+                <constructor-arg value="radio1"/>
+
+        </bean>
+
+        <bean class = "com.nc.example.solution.lesson22.Radio" id = "second" init-method="playMusic">
+                <constructor-arg value="radio2"/>
+        </bean>
+
+        <bean class = "com.nc.example.solution.lesson22.Radio" id = "third" init-method="playMusic">
+                <constructor-arg value="radio3"/>
+        </bean>
+
+        <bean class = "com.nc.example.solution.lesson22.Radio" id = "fourth" init-method="playMusic">
+                <constructor-arg value="radio4"/>
+        </bean>
+
+</beans>
