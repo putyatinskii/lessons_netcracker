@@ -17,6 +17,23 @@ public class Solution_lesson22 implements LessonAPI {
         Radio secondRadio = (Radio) applicationContext.getBean("second");
         Radio thirdRadio = (Radio) applicationContext.getBean("third");
         Radio fourthRadio = (Radio) applicationContext.getBean("fourth");
-
+        try(Scanner scanner = new Scanner(System.in)) {
+            while (scanner.hasNextLine()) {
+                switch(scanner.nextLine()) {
+                    case "1":
+                        firstRadio.playMusic();
+                        break;
+                    case "2":
+                        secondRadio.playMusic();
+                        break;
+                    case "3":
+                        thirdRadio.playMusic();
+                        break;
+                    case "4":
+                        fourthRadio.playMusic();
+                        break;
+                }
+            }
+        }
     }
 }
